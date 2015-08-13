@@ -1,0 +1,317 @@
+
+client table
+-firstname
+-medianname
+-lastname
+-picpath
+-residence
+-personalmobile
+-homemobile
+-email 
+-nhif 
+-profesion
+-location
+-keen
+-keenmobile
+-username
+-password
+            $table->char('firstname' , 60);
+			      $table->char('medianname' , 60);
+			      $table->char('lastname' , 60);
+            // $table->string('picpath');
+            $table->string('residence');
+            $table->string('personalmobile');
+            $table->string('homemobile');
+            $table->string('email');
+            $table->string('nhif');
+            $table->string('profesion');
+            $table->string('location');
+            $table->char('keen'); 
+            $table->string('keenmobile');
+            $table->string('username');
+            $table->string('password'); 
+
+                              $password = $password2 ;
+                              $Client = new Client;
+                              $Client->firstname = Input::get('firstname');
+                              $Client->medianname = Input::get('medianname');
+                              $Client->lastname = Input::get('lastname');
+                              $Client->residence = Input::get('residence');
+                              $Client->personalmobile = Input::get('personalmobile');
+                              $Client->homemobile = Input::get('homemobile');
+                              $Client->email = Input::get('email');
+                              $Client->nhif = Input::get('nhif');
+                              $Client->profesion = Input::get('profesion');
+                              $Client->location = Input::get('location');
+                              $Client->keen = Input::get('keen');
+                              $Client->keenmobile = Input::get('keenmobile');
+                              $Client->username = Input::get('username');
+                              $Client->password = Hash::make(trim($password));
+                              $Client->save();
+
+
+book table
+
+ -filenumber
+ -name
+ -visit2
+ -time
+ -reason
+  
+            $table->increments('id');
+            $table->timestamps();
+            $table->biginteger('filenumber');
+            $table->string('name');
+            $table->string('visit2');
+            $table->time('sunrise');
+            $table->string('reason');
+
+                                                $Book = new Book;
+                                                $Book->filenumber = Input::get('filenumber');
+                                                $Book->name = Input::get('name');
+                                                $Book->visit2 = Input::get('visit2');
+                                                $Book->time = Input::get('time');
+                                                $Book->reason = Input::get('reason');
+                                                $Book->save();
+
+
+consultation table
+ -filenumber
+ -symptoms
+ -doctor
+
+
+            $table->increments('id');
+            $table->timestamps();
+            $table->biginteger('filenumber');
+            $table->text('symptoms');
+            $table->string('doctor');
+            
+                                                $Consultation = new Consultation;
+                                                $Consultation->filenumber = Input::get('filenumber');
+                                                $Consultation->symptoms = Input::get('symptoms');
+                                                $Consultation->doctor = Input::get('doctor');
+                                                $Consultation->save();
+
+
+Lab table
+-filenumber
+-symptoms
+-test
+-observation
+-hiv&aids
+-resuilt
+-technician  
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('symptoms');
+              $table->text('test');
+              $table->text('observation');
+              $table->text('hivaids');
+              $table->text('resuilt');
+              $table->text('technician');
+
+
+
+
+                                            Input::get('filenumber');
+                                            Input::get('symptoms');
+                                            Input::get('test');
+                                            Input::get('observation');
+                                            Input::get('hivaids');
+                                            Input::get('resuilt');
+                                            Input::get('technician');
+
+
+                                                  $Lab = new Lab;
+                                                  $Lab ->filenumber = Input::get('filenumber');
+                                                  $Lab ->symptoms = Input::get('symptoms');
+                                                  $Lab ->test = Input::get('test');
+                                                  $Lab ->observation = Input::get('observation');
+                                                  $Lab ->hivaids = Input::get('hivaids');
+                                                  $Lab ->resuilt = Input::get('resuilt');
+                                                  $Lab ->technician = Input::get('technician');
+                                                  $Lab ->save();
+
+
+              
+Diagnosis Table
+-filenumber
+-diagnosis
+-prescription
+-comments
+-doctor
+
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('diagnosis');
+              $table->text('prescription');
+              $table->text('comments');
+              $table->text('doctor');
+                   
+
+                                            Input::get('filenumber');
+                                            Input::get('diagnosis');
+                                            Input::get('prescription');
+                                            Input::get('comments');
+                                            Input::get('doctor');
+
+
+                                          $Diagnosis = new Diagnosis;
+                                          $Diagnosis ->filenumber = Input::get('filenumber');
+                                          $Diagnosis ->diagnosis = Input::get('diagnosis');
+                                          $Diagnosis ->prescription = Input::get('prescription');
+                                          $Diagnosis ->comments = Input::get('comments');
+                                          $Diagnosis ->doctor = Input::get('doctor');
+                                          $Diagnosis ->save();
+
+payment table
+-filenumber
+- consultationfee
+- labfee
+- medicationfee
+-admissionfee
+- totalcharges
+- paid
+- balance
+             
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('consultationfee');
+              $table->text('labfee');
+              $table->text('medicationfee');
+              $table->text('admissionfee');
+              $table->text('totalcharges');
+              $table->text('paid');
+              $table->text('balance');
+
+                                            Input::get('filenumber');
+                                            Input::get('consultationfee');
+                                            Input::get('labfee');
+                                            Input::get('medicationfee');
+                                            Input::get('admissionfee');
+                                            Input::get('totalcharges');
+                                            Input::get('paid');
+                                            Input::get('balance');
+
+
+
+                                            $Payment = new Payment;
+                                            $Payment->filenumber = Input::get('filenumber');
+                                            $Payment ->consultationfee = Input::get('consultationfee');
+                                            $Payment->labfee = Input::get('labfee');
+                                            $Payment ->prescription = Input::get('medicationfee');
+                                            $Payment ->admissionfee=Input::get('admissionfee');
+                                            $Payment ->totalcharges = Input::get('totalcharges');
+                                            $Payment ->paid =Input::get('paid');
+                                            $Payment ->balance = Input::get('balance');
+                                            $Payment ->save();
+
+
+Pharmacy table
+ -filenumber
+ -diagnosis
+ -prescription
+ -medication
+ -servedby
+
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('diagnosis');
+              $table->text('prescription');
+              $table->text('medication');
+              $table->text('servedby');
+
+                                            Input::get('filenumber');
+                                            Input::get('diagnosis');
+                                            Input::get('prescription');
+                                            Input::get('medication');
+                                            Input::get('servedby');
+
+                                            
+
+                                                      $Pharmacy= new Pharmacy;
+                                                      $Pharmacy ->filenumber = Input::get('filenumber');
+                                                      $Pharmacy ->diagnosis = Input::get('diagnosis');
+                                                      $Pharmacy ->prescription = Input::get('prescription');
+                                                      $Pharmacy ->medication = Input::get('medication');
+                                                      $Pharmacy ->servedby = Input::get('servedby');
+                                                      $Pharmacy ->save();
+
+admission table
+-filenumber
+-admissiondate
+-wing
+-word
+-bednumber
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('admissiondate');
+              $table->text('wing');
+              $table->text('word');
+              $table->text('bednumber');
+                                            
+                                            Input::get('filenumber');
+                                            Input::get('admissiondate');
+                                            Input::get('wing');
+                                            Input::get('word');
+                                            Input::get('bednumber');
+
+
+                                                      $Admission= new Admission;
+                                                      $Admission ->filenumber = Input::get('filenumber');
+                                                      $Admission ->admissiondate = Input::get('admissiondate');
+                                                      $Admission ->wing = Input::get('wing');
+                                                      $Admission ->word = Input::get('word');
+                                                      $Admission ->bednumber = Input::get('bednumber');
+                                                      $Admission ->save();
+
+clearance table
+
+-clearancedate
+-comments
+-cleared by
+
+              $table->increments('id');
+              $table->timestamps();
+              $table->biginteger('filenumber');
+              $table->text('clearancedate');
+              $table->text('comments');
+              $table->text('clearedby');
+           
+                                            Input::get('filenumber');
+                                            Input::get('clearancedate');
+                                            Input::get('comments');
+                                            Input::get('clearedby);
+
+                                    $Clearance = new Clearance;
+                                    $Clearance ->filenumber = Input::get('filenumber');
+                                    $Clearance ->clearancedate = Input::get('clearancedate');
+                                    $Clearance  ->comments= Input::get('comments');
+                                    $Clearance  ->clearedby= Input::get('clearedby');
+                                    $Clearance  ->save();
+
+                                           
+
+              
+
+                                                      
+
+
+                                            
+              
+              
+
+                                            
+
+              

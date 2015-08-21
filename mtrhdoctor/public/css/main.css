@@ -1,0 +1,182 @@
+*  {
+    margin: 0;
+    padding: 2;
+    background-color: 003333;
+    color:999999 ;
+
+    
+   }
+
+//below class applies to all pages 
+body {
+    background-color: 003333;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10.5px;
+
+     }
+
+#headcover
+
+    {
+    
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    -webkit-flex:initial;
+    flex-wrap:ltr;
+    align-content:space-between;
+    flex:auto;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    max-width:1500px ;
+    max-height: 200px;
+    vertical-align: top;
+    flex-wrap:ltr;
+
+
+    }
+    #logtable
+    {
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    align:right 3px;
+   
+    
+
+    }
+
+
+
+
+
+    #pix
+    {
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    max-width:1030px; 
+    max-height:400px;
+
+    } 
+
+
+
+    #logo
+    
+    {
+
+     display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    position: top;
+   border-radius: 8px;
+   padding-left:1px;
+    align:left;
+    flex:auto;
+    border-left: 0px;
+    
+    
+    }
+
+    #login
+    {
+
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    -webkit-flex:initial;
+    justify-content:space-around;
+     flex-wrap:rtl;
+     align:right;
+     flex:auto;
+     flex-wrap:ltr;
+
+    }
+
+     #pictureframe
+     {
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    -webkit-flex:initial;
+    flex-wrap:ltr;
+    align-content:space-between;
+    flex:auto;
+    flex-flow:column wrap;
+    justify-content:space-around;
+    max-width:1050px ;
+    max-height:500px;
+    vertical-align: center;
+    flex-wrap:ltr;
+
+     }
+
+     #aftertext
+     {
+
+     display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    -webkit-flex:initial;
+    flex-wrap:rtl;
+    align-content:space-between;
+    flex:auto;
+    flex-flow:raw wrap;
+    justify-content:space-around;
+    align:right;
+
+
+     }
+
+     #fonty
+     {
+      
+      color:FFFFFF;
+      font-family: FreeMono;
+      font-size: 12px;
+
+     }
+     
+     #bottom
+     {
+         vertical-align: bottom;
+         padding-bottom: autocvc;
+
+
+
+     }
+
+    #circle
+    {
+       width:90px;
+       height:90px;
+       border-radius: 80% 80% 80% 80%;
+       border-style:ridge;
+       border-color:999999; 
+       background-color: 666666;
+       border: 3px;
+
+       
+
+      }
+
+      #box
+      {
+    display: -webkit-flex;
+    display: flex;
+    display:flexbox;
+    display:box;
+    justify-content:space-around;
+    width:200px;
+    height: 200px; 
+     
+      }
+
